@@ -1,14 +1,18 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
 module.exports = {
     entry: {
-       'app': './src/index.js',
+      'app': './src/index.js',
+      'assets/js/navbar':'./src/assets/js/navbar.js'
+
     },
     output: {
         path: path.join(__dirname,  "/app"),
-        publicPath: '',
+        publicPath: '/',
         filename: '[name].js',
         clean: true,
         assetModuleFilename: 'assets/images/[hash][ext][query]'
@@ -24,7 +28,12 @@ module.exports = {
             writeToDisk: true
           }
       },
-      performance: {hints: false,},
+      performance: {
+        assetFilter: function (assetFilename) {
+          return assetFilename.endsWith('.js');
+        },
+        hints: false,
+      },
 // modules
 module: {
     rules: [
@@ -52,7 +61,7 @@ module: {
             loader: "file-loader", 
             options: {
               name: '[name].[ext]',
-              outputPath: "app/fonts",
+              outputPath: "assets/fonts/",
             }
           }
         ]
@@ -70,16 +79,36 @@ module: {
             presets: ['@babel/preset-env']
           }
         }
-      }
+      },
+      
     ],
   },
 // plugins
 plugins:[
+  new webpack.ProvidePlugin({
+    $: "jquery",  
+    jQuery: "jquery" 
+  }),
   new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
   }),
-  new MiniCssExtractPlugin({filename:"app/css/style.css"}),
+  new HtmlWebpackPlugin({ 
+    filename: "components/navbar.html",
+    template: "./src/components/navbar.html",
+    chunks:['app','assets/js/navbar']
+  }),
+  new HtmlWebpackPlugin({ 
+    filename: "components/slider.html",
+    template: "./src/components/slider.html",
+    chunks:['app']
+  }),
+  new HtmlWebpackPlugin({ 
+    filename: "components/card.html",
+    template: "./src/components/card.html",
+    chunks:['app']
+  }),
+  new MiniCssExtractPlugin({filename:"assets/css/style.css"}),
   new OptimizeCssAssetsPlugin({}),
 ],
 }

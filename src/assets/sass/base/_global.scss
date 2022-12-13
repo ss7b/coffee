@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+    direction: rtl;
+  }
+  body {
+    font-size: $font-base;
+    line-height: $line-height;
+    color: $content-color;
+    background-color: $bg-color;
+    font-family: $family-content;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  a, a:active, a:hover, a:focus{
+    text-decoration: none;
+    color: $title-color !important;
+  }

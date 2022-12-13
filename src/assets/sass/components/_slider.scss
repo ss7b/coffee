@@ -1,0 +1,30 @@
+.c-slider{
+    &__inIndicators{
+        background-clip: unset !important;
+        background-color: $primary-color !important;
+        height: 15px !important;
+        width: 15px!important;
+        border-radius: 4px!important;
+        border: 0 !important;
+        &.active{
+            width: 30px !important;
+        }
+    }
+    &__img{
+        height: 50vh;
+        max-height: 100%;
+        object-fit: cover;
+        @include breakpiont(md){
+        height: 70vh;
+        }
+        @include breakpiont(lg){
+        height: 100vh;
+        }
+    }
+    &__control{
+        display: none !important; 
+        @include breakpiont(md){
+            display: block !important;
+        }
+    }
+}

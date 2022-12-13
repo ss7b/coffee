@@ -1,0 +1,6 @@
+@mixin borderdir($dir, $si , $color) {
+    border-#{$dir}: $si solid $color;
+}
+@mixin border($si , $color) {
+    border: $si solid $color;
+}

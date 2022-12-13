@@ -1,0 +1,118 @@
+.c-navbar{
+    position: absolute !important;
+    width: 100%;
+    z-index: 99;
+    &__logo{
+        width: 70px !important;
+        max-width: 100%;
+    }
+    .brand{
+        color: white;
+    }
+    
+    .c-navbar__nav{
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        .nav-menu{
+            display: none;
+            @include breakpiont(md){
+                display: flex;
+            }
+        }
+    }
+    &__action{
+        color: $white;
+        display: flex;
+        align-items: center;
+        .search{
+            &-icon:hover{
+                color: $primary-color;
+                transition: $transtion ;
+            }
+            &-input{
+                width: 0;
+                display: none;
+                @include border(1px, $white);
+                border-radius: 4px;
+                padding: 0 10px;
+                background: none;
+                color: $primary-color;
+                &::placeholder{
+                    color: $white;
+                }
+                &:focus{
+                    outline: none;
+                    border-color: $primary-color;
+                }
+                &.active{
+                    width: 85%;
+                    display: inline-block;
+                }
+            }
+        }
+        
+        a{
+            color: $white !important;
+            &:hover{
+                color: $primary-color !important;
+            }
+        }
+    }
+    .nav-item{
+        .nav-link{
+            padding: 12px !important;
+            position: relative;
+            color: $white !important;
+            transition: $transtion;
+            &:hover,
+            &.active{
+                color: $brown !important;
+            }
+            &::before,
+            &.active::before{
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 0%;
+                background-color: $primary-color;
+                bottom: 0;
+                transition: $transtion;
+            }
+            &.active::before{
+                width: 100%;
+            }
+        }
+        &:hover .nav-link::before{
+            width: 100%;
+        }
+    }
+    .nav-mobail{
+        position: fixed;
+        bottom: 0;
+        background-color: $primary-color;
+        padding: 10px 0;
+        &__menu{
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+            li{
+                flex-basis: 25%;
+                text-align: center;
+                &:not(:last-child){
+                    border-left: 1px solid #000;
+                }
+                &:hover i{
+                    color: #fff;
+                    transition: $transtion;
+                }
+            }
+        }
+        @include breakpiont(md){
+            display: none !important;
+        }
+    }
+}

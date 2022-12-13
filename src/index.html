@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,116 @@
     <script type="text/html" src="{require('index.js')}"></script>
 </head>
 <body>
-    <h1>hello world</h1>
-    <img src="assets/images/logo.png" alt="">
+    <nav class="navbar navbar-expand-lg navbar-light c-navbar">
+        <div class=" container-fluid container-lg">
+          <div class="navbar-brand">
+            <a class="" href="#"><img class="c-navbar__logo" src="./assets/images/logo.png" alt="brand"></a>
+            <span class="brand">كوفيك</span>
+          </div>
+          <div class="c-navbar__nav fs-5">
+            <ul class="nav-menu  flex-row mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href=".">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">من نحن</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="delivery.html" >الموزعين</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="contact.html" >تواصل معنا</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-navbar__action ms-md-4">
+            <div class="search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="ابحث" class="search-input">
+            </div>
+            <a class=" ms-3" href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="container-fluid nav-mobail">
+          <ul class="nav-mobail__menu ">
+            <li><a href="."><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="./about.html"><i class="fa-solid fa-users"></i></a></li>
+            <li><a href="delivery.html"><i class="fa-solid fa-truck-ramp-box"></i></a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-headset"></i></a></li>
+          </ul>
+        </div>
+    </nav>
+    <div id="index-slider" class="carousel slide slide c-slider" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#index-slider" data-bs-slide-to="0" class="c-slider__inIndicators active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#index-slider" data-bs-slide-to="1" class="c-slider__inIndicators" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#index-slider" data-bs-slide-to="2" class="c-slider__inIndicators" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#index-slider" data-bs-slide-to="3" class="c-slider__inIndicators" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#index-slider" data-bs-slide-to="4" class="c-slider__inIndicators" aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/images/slider-1.jpg" class="d-block w-100 c-slider__img" alt="slider-1">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/slider-2.jpg" class="d-block w-100 c-slider__img" alt="slider-2">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/slider-3.jpg" class="d-block w-100 c-slider__img" alt="slider-3">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/slider-4.jpg" class="d-block w-100 c-slider__img" alt="slider-4">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/slider-5.jpg" class="d-block w-100 c-slider__img" alt="slider-5">
+        </div>
+      </div>
+      <button class="carousel-control-prev c-slider__control" type="button" data-bs-target="#index-slider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next c-slider__control" type="button" data-bs-target="#index-slider" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <section class="features">
+      <div class="container">
+        <h2>مميزات الشركة</h2>
+      <div class="row">
+        <div class="col-12">
+          <div class="card c-card c-card--Horizontal">
+            <div class="card-header c-card__header">
+                <i class="fa-solid fa-truck-fast c-card__header__icon"></i>
+            </div>
+            <div class="card-body c-card__body">
+              <p class="card-text c-card__body__text">دائما يتم شحن منتجاتنا الطازجة مباشرة من المصنع</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12">
+          <div class="card c-card c-card--Horizontal">
+            <div class="card-header c-card__header">
+              <i class="fa-solid fa-box-archive c-card__header__icon"></i>
+            </div>
+            <div class="card-body c-card__body">
+              <p class="card-text c-card__body__text">ترسل منتجاتنا في عبوات خاصة توفر الحماية الكاملة ضد الحرارة والتأثيرات الخارجية</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12">
+          <div class="card c-card c-card--Horizontal">
+            <div class="card-header c-card__header">
+              <i class="fa-solid fa-money-check-dollar c-card__header__icon"></i>
+            </div>
+            <div class="card-body c-card__body">
+              <p class="card-text c-card__body__text">أدخل رقم هاتفك في ملف تعريف الخاص بك واكسب النقاط لكل طلبية</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      
+    </section>
 </body>
 </html>

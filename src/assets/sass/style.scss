@@ -1,0 +1,16 @@
+@import "./config/config";
+@import "./utilities/utilities.scss";
+@import "./base/base";
+
+@import "./components/components";
+
+
+.features{
+    background-image: url("../images/slider-1.jpg");
+    position: relative;
+    &::before{
+        content: '';
+        @include overlay($white,0.9)
+
+    }
+}

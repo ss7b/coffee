@@ -1,0 +1,32 @@
+.c-card{
+    padding: 20px;
+    background-color: $white;
+    margin-bottom: 20px;
+    border: none !important;
+    max-width: 100%;
+    &__header{
+        background: transparent !important;
+        border-bottom: 0 !important;
+        &__icon{
+            color: $primary-color;
+            font-size: 60px;
+        }
+    }
+    &__body{
+        color: yellowgreen;
+        &__title{
+            color: $title-color;
+            font-weight: bold;
+        }
+        &__text{
+            color: $title-color;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+    &--Horizontal{
+        background: transparent !important;
+        text-align: center;
+        @include border(1px, $primary-color !important) 
+    }
+}
