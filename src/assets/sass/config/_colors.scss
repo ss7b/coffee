@@ -1,18 +1,23 @@
 $brown: #c0aa83;
 $black: #242424;
-$black2: #171717;
+$black2: #2c2c2c;
+$black3: lighten(#242424, 10%);
+
 $gray: #8b8b8b;
-$darken-gray: #7777;
+$darken-gray: #777;
 $white: #fff;
 
 $bg-color: #fff;
+$bg-color2: $black2;
 $section-color: $black;
 
 $primary-color: $brown;
+$darken-primary-color: darken($primary-color, 20%);
+$lighten-primary-color: lighten($primary-color,10%) ;
 $secondary-color: $black;
 
 $title-color: $secondary-color;
-$content-color: $darken-gray;
+$content-color: #777;
 
 
 

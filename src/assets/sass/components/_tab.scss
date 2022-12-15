@@ -1,0 +1,23 @@
+.c-tab{
+    margin-bottom: 30px;
+    .c-tab__btn{
+        @include border(1px,$lighten-primary-color);
+        border-radius: $border-radius;
+        padding: 0 8px;
+        font-size: 20px;
+        color: $lighten-primary-color;
+        margin-left: 10px;
+        &.active,
+        &:hover,
+        &:focus{
+           color: $primary-color;
+           border-color: $primary-color;
+        }
+    }
+}
+.fade{
+    display: block !important;
+}
+.fade:not(.show){
+    display: none !important;
+}

@@ -1,0 +1,84 @@
+.c-footer{
+    background-image: url("../images/product-3-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    position: relative;
+    &::before{
+        content: '';
+        @include overlay($white,0.8)
+    }
+    &__logo{
+        width: 100px;
+        & + .brand{
+            color: $black;
+            font-size: 50px;
+        }
+    }
+    .subscribe{
+        @include breakpiont(lg){
+            width: 80%;
+        }
+    }
+    .socail-icons{
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        .socail-icon{
+            padding: 5px 10px;
+            color: $primary-color;
+            margin: 0 15px;
+            @include border(1px, $primary-color);
+            &:hover{
+                color: $darken-primary-color;
+                border-color: $darken-primary-color;
+            }
+        }
+    }
+    &__bottom {
+        color: $title-color;
+        font-size: 16px;
+        @include borderdir(top,1px,$primary-color);
+        #date{
+            color: $primary-color;
+            font-weight: bold;
+        }
+    }
+}   
+
+.no-border-right{
+    border: {
+        top-right-radius: 0 !important;
+        bottom-right-radius: 0 !important;
+    }
+}
+.no-border-left{
+    border: {
+        top-left-radius: 0 !important;
+        bottom-left-radius: 0 !important;
+    }
+}
+
+.socail-icons{
+    display: flex;
+    justify-content: center;
+}
+.socail-icon{
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    color: $primary-color;
+    margin: 0 15px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    @include border(1px, $primary-color);
+    &:hover{
+        color: $darken-primary-color;
+        border-color: $darken-primary-color;
+    }
+    &-lg{
+        height: 70px;
+        width: 70px;
+    }
+}

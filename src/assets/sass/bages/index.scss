@@ -1,0 +1,19 @@
+.features{
+    background-image: url("../images/slider-1.jpg");
+    position: relative;
+    &::before{
+        content: '';
+        @include overlay($white,0.9)
+    }
+}
+.product{
+    background-color: $black2;
+}
+.over{
+    position: relative;
+    &::before{
+        content: "";
+        @include overlay($black2,0.2);
+        z-index: 1;
+    }
+}

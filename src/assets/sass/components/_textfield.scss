@@ -1,0 +1,37 @@
+.c-textfield{
+    &__label{
+        color: $content-color;
+        font-size: 20px;
+    }
+    &__control{
+        background-color: transparent !important;
+        border-color: $primary-color !important;
+        border-radius: 4px !important;
+        color: $primary-color !important;
+        font-weight: bold !important;
+        padding: 15px 12px !important;
+        &:focus{
+            box-shadow: none !important;
+            border-color: $darken-primary-color!important;
+        }
+        &::placeholder{
+            color: $lighten-primary-color !important;
+        }
+    }
+    &__textarea{
+        height: 150px;
+        resize: none;
+    }
+}
+.no-border-right{
+    border: {
+        top-right-radius: 0 !important;
+        bottom-right-radius: 0 !important;
+    }
+}
+.no-border-left{
+    border: {
+        top-left-radius: 0 !important;
+        bottom-left-radius: 0 !important;
+    }
+}

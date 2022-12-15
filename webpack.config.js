@@ -7,8 +7,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports = {
     entry: {
       'app': './src/index.js',
-      'assets/js/navbar':'./src/assets/js/navbar.js'
-
+      'assets/js/footer':'./src/assets/js/footer.js',
     },
     output: {
         path: path.join(__dirname,  "/app"),
@@ -93,6 +92,16 @@ plugins:[
       filename: "index.html",
       template: "./src/index.html",
   }),
+  new HtmlWebpackPlugin({
+    filename: "contact.html",
+    template: "./src/contact.html",
+    chunks:['app','assets/js/footer']
+  }),
+  new HtmlWebpackPlugin({
+    filename: "aboutus.html",
+    template: "./src/aboutus.html",
+    chunks:['app','assets/js/footer']
+  }),
   new HtmlWebpackPlugin({ 
     filename: "components/navbar.html",
     template: "./src/components/navbar.html",
@@ -107,6 +116,36 @@ plugins:[
     filename: "components/card.html",
     template: "./src/components/card.html",
     chunks:['app']
+  }),
+  new HtmlWebpackPlugin({ 
+    filename: "components/button.html",
+    template: "./src/components/button.html",
+    chunks:['app']
+  }),
+  new HtmlWebpackPlugin({ 
+    filename: "components/tab.html",
+    template: "./src/components/tab.html",
+    chunks:['app']
+  }),
+  new HtmlWebpackPlugin({ 
+    filename: "components/heading.html",
+    template: "./src/components/heading.html",
+    chunks:['app']
+  }),
+  new HtmlWebpackPlugin({ 
+    filename: "components/footer.html",
+    template: "./src/components/footer.html",
+    chunks:['app','assets/js/footer']
+  }),
+  new HtmlWebpackPlugin({ 
+    filename: "components/textfield.html",
+    template: "./src/components/textfield.html",
+    chunks:['app',]
+  }),
+  new HtmlWebpackPlugin({ 
+    filename: "components/hero.html",
+    template: "./src/components/hero.html",
+    chunks:['app',]
   }),
   new MiniCssExtractPlugin({filename:"assets/css/style.css"}),
   new OptimizeCssAssetsPlugin({}),

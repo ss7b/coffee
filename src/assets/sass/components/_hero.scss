@@ -1,0 +1,25 @@
+.c-hero{
+    background-image: url(../images/product-2-1.jpg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    &::before{
+        content: "";
+        @include overlay($black,0.7)
+    }
+    h1{
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 50px;
+        padding-bottom: 10px;
+        @include borderdir(bottom, 1px , $white);
+        @include breakpiont(md){
+            font-size: 50px;
+        }
+    }
+}

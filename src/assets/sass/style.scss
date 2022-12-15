@@ -4,13 +4,6 @@
 
 @import "./components/components";
 
-
-.features{
-    background-image: url("../images/slider-1.jpg");
-    position: relative;
-    &::before{
-        content: '';
-        @include overlay($white,0.9)
-
-    }
-}
+// pages
+@import "./bages/index.scss";
+@import "./bages/aboutus.scss";

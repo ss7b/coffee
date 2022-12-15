@@ -1,0 +1,27 @@
+.how-we-are{
+    align-items: center;
+    @include breakpiont(lg){
+        align-items: stretch !important;
+    }
+    h4{
+        color: $primary-color;
+    }
+    h2{
+        color: $section-color;
+        font-size: 40px !important;
+        font-weight: bold;
+    }
+    p{
+        color: $content-color;
+        line-height: $line-height;
+    }
+    .image{
+        @include breakpiont(lg){
+            width: 400px;
+            margin: auto;
+        }
+    }
+}
+.Our-Stats{
+    background-color: $bg-color2;
+}
