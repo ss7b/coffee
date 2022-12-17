@@ -1,0 +1,7 @@
+@function textColor($color){
+    @if(lightness($color) > 70){
+        @return $black2;
+    }@else{
+        @return $white;
+    }
+}

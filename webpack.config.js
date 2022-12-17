@@ -8,6 +8,8 @@ module.exports = {
     entry: {
       'app': './src/index.js',
       'assets/js/footer':'./src/assets/js/footer.js',
+      'assets/js/button':'./src/assets/js/button.js',
+      'assets/js/product':'./src/assets/js/product.js',
     },
     output: {
         path: path.join(__dirname,  "/app"),
@@ -101,6 +103,21 @@ plugins:[
     filename: "aboutus.html",
     template: "./src/aboutus.html",
     chunks:['app','assets/js/footer']
+  }),
+  new HtmlWebpackPlugin({
+    filename: "product-1.html",
+    template: "./src/product-1.html",
+    chunks:['app','assets/js/footer','assets/js/button','assets/js/product']
+  }),
+  new HtmlWebpackPlugin({
+    filename: "product-2.html",
+    template: "./src/product-2.html",
+    chunks:['app','assets/js/footer','assets/js/button','assets/js/product']
+  }),
+  new HtmlWebpackPlugin({
+    filename: "product-3.html",
+    template: "./src/product-3.html",
+    chunks:['app','assets/js/footer','assets/js/button','assets/js/product']
   }),
   new HtmlWebpackPlugin({ 
     filename: "components/navbar.html",

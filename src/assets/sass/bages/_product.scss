@@ -1,0 +1,57 @@
+.details{
+    h1{
+        color: $title-color;
+    }
+    h3{
+        color: $primary-color;
+    }
+}
+.brand-rattin{
+    @include borderdir(bottom,1px,$primary-color);
+    font-size: 12px;
+    .instock{
+        color: #86ba45;
+    }
+}
+.product-bage{
+    background-color: lighten($primary-color,24%);
+    .c-tab{
+        margin-bottom: 10px;
+    }
+    .tab-content{
+        background-color: $lighten-primary-color;
+        padding: 20px 10px;
+        color: $white;
+        .decription{
+            color: $white;
+            line-height: $line-height;
+        }
+        .c-textfield__label{
+            color: $white;
+        }
+        .c-textfield__control{
+            border-color: $white !important;
+            color: $white !important;
+            &::placeholder{
+                color: $white !important;
+            }
+        }
+        .c-btn{
+            border-color: $white !important;
+        }
+    } 
+}
+.pro-ratting{
+    color: #ffd333;
+    & + a{
+        color: $content-color !important;
+    }
+}
+.singel-rate{
+    font-size: 13px;
+
+    &:hover,
+    &.active{
+    color: #ffd333;
+    }
+}

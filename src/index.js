@@ -7,9 +7,3 @@ import 'bootstrap/dist/css/bootstrap.rtl.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
-$(function(){
-    $('.search-icon').on('click', function(){
-        console.log("ss")
-        $('.search-input').toggleClass('active')
-    })
-})

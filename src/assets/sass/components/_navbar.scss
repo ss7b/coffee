@@ -7,7 +7,7 @@
         max-width: 100%;
     }
     .brand{
-        color: white;
+        color: textColor($black);
     }
     
     .c-navbar__nav{
@@ -22,7 +22,7 @@
         }
     }
     &__action{
-        color: $white;
+        color: textColor($black);
         display: flex;
         align-items: center;
         .search{
@@ -33,7 +33,7 @@
             &-input{
                 width: 0;
                 display: none;
-                @include border(1px, $white);
+                @include border(1px, textColor($black));
                 border-radius: 4px;
                 padding: 0 10px;
                 background: none;
@@ -53,7 +53,7 @@
         }
         
         a{
-            color: $white !important;
+            color: textColor($black)!important;
             &:hover{
                 color: $primary-color !important;
             }
@@ -63,7 +63,7 @@
         .nav-link{
             padding: 12px !important;
             position: relative;
-            color: $white !important;
+            color: textColor($black)!important;
             transition: $transtion;
             &:hover,
             &.active{
@@ -113,6 +113,28 @@
         }
         @include breakpiont(md){
             display: none !important;
+        }
+    }
+    &-relative{
+        position: relative !important;
+        .brand{
+            color: textColor($white);
+        }
+        .c-navbar__action{
+            color: textColor($white);
+            .search{
+                &-input{
+                    @include border(1px, textColor($white));
+                }
+            }
+            a{
+                color: textColor($white)!important;
+            }
+        }
+        .nav-item{
+            .nav-link{
+                color: textColor($white)!important;
+            }
         }
     }
 }
