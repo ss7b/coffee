@@ -119,6 +119,11 @@ plugins:[
     template: "./src/product-3.html",
     chunks:['app','assets/js/footer','assets/js/button','assets/js/product']
   }),
+  new HtmlWebpackPlugin({
+    filename: "delivery.html",
+    template: "./src/delivery.html",
+    chunks:['app','assets/js/footer',]
+  }),
   new HtmlWebpackPlugin({ 
     filename: "components/navbar.html",
     template: "./src/components/navbar.html",
