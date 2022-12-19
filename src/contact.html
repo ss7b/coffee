@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كوفيك |الرئيسية</title>
+    <title>كوفيك |تواصل معنا</title>
     <script type="text/html" src="{require('index.js')}"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
               <div class="c-navbar__nav fs-5">
                 <ul class="nav-menu  flex-row mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" href=".">الرئيسية</a>
+                    <a class="nav-link" href=".">الرئيسية</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./aboutus.html">من نحن</a>
@@ -27,7 +27,7 @@
                     <a class="nav-link " href="delivery.html" >الموزعين</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link " href="contact.html" >تواصل معنا</a>
+                    <a class="nav-link active" href="contact.html" >تواصل معنا</a>
                   </li>
                 </ul>
               </div>
@@ -44,7 +44,7 @@
                 <li><a href="."><i class="fa-solid fa-house"></i></a></li>
                 <li><a href="./aboutus.html"><i class="fa-solid fa-users"></i></a></li>
                 <li><a href="delivery.html"><i class="fa-solid fa-truck-ramp-box"></i></a></li>
-                <li><a href="contact.html"><i class="fa-solid fa-headset"></i></a></li>
+                <li><a href="contact.html" class="active"><i class="fa-solid fa-headset"></i></a></li>
               </ul>
             </div>
         </nav>
@@ -55,7 +55,7 @@
     <div class="pt-4">
       <div class="container mb-5">
         <div class="row">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-7">
             <div class="row">
               <div class="col-12 col-lg-6">
                 <div class="card c-card"  >
@@ -119,36 +119,39 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6">
-            <div class="row">
-              <div class="col-12">
-                <div class="mb-3 c-textfield">
-                  <label for="exampleFormControlInput1" class="form-label c-textfield__label">الاسم</label>
-                  <input type="text" class="form-control c-textfield__control" id="exampleFormControlInput1" placeholder="اسم لثلاثي">
+          <div class="col-12 col-md-5">
+            <form>
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-3 c-textfield">
+                    <label for="exampleFormControlInput1" class="form-label c-textfield__label">الاسم</label>
+                    <input type="text" class="form-control c-textfield__control" id="exampleFormControlInput1" placeholder="اسم لثلاثي" required>
+                  </div>
                 </div>
-              </div>
-              <div class="col-6">
-                <div class="mb-3 c-textfield">
-                  <label for="exampleFormControlInput1" class="form-label c-textfield__label">رقم الجوال</label>
-                  <input type="text" class="form-control c-textfield__control" id="exampleFormControlInput1">
+                <div class="col-6">
+                  <div class="mb-3 c-textfield">
+                    <label for="exampleFormControlInput1" class="form-label c-textfield__label">رقم الجوال</label>
+                    <input type="text" class="form-control c-textfield__control" id="exampleFormControlInput1" required>
+                  </div>
                 </div>
-              </div>
-              <div class="col-6">
-                <div class="mb-3 c-textfield">
-                  <label for="exampleFormControlInput1" class="form-label c-textfield__label">بريد الكتروني</label>
-                  <input type="email" class="form-control c-textfield__control" id="exampleFormControlInput1" placeholder="example@example">
+                <div class="col-6">
+                  <div class="mb-3 c-textfield">
+                    <label for="exampleFormControlInput1" class="form-label c-textfield__label">بريد الكتروني</label>
+                    <input type="email" class="form-control c-textfield__control" id="exampleFormControlInput1" placeholder="example@example" required>
+                  </div>
                 </div>
-              </div>
-              <div class="col-12">
-                <div class="mb-3 c-textfield">
-                  <label for="exampleFormControlTextarea1" class="form-label c-textfield__label">رسالتك</label>
-                  <textarea class="form-control c-textfield__control c-textfield__textarea" placeholder="اكتب رسالتك هنا" ></textarea>
+                <div class="col-12">
+                  <div class="mb-3 c-textfield">
+                    <label for="exampleFormControlTextarea1" class="form-label c-textfield__label">رسالتك</label>
+                    <textarea class="form-control c-textfield__control c-textfield__textarea" placeholder="اكتب رسالتك هنا" required></textarea>
+                  </div>
                 </div>
-              </div>
-              <div class="col-12">
-                <div class="btn c-btn c-btn-primary w-100">إرسال<i class="fa-solid fa-paper-plane ms-2"></i></div>
-              </div>
+                <div class="col-12">
+                  <button type="submit" class="btn c-btn c-btn-primary w-100">إرسال<i class="fa-solid fa-paper-plane ms-2"></i></button>
+                </div>
             </div>
+            </form>
+            
           </div>
         </div>
       </div>

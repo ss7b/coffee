@@ -88,6 +88,9 @@
                   }
                 }
             }
+            .qtybutton:hover {
+                background-color: $primary-color;
+            }
         }
     }
     @else if $bageName == turkish-coffee{
@@ -141,6 +144,9 @@
                     height: 0%;
                   }
                 }
+            }
+            .qtybutton:hover {
+                background-color: $primary-color;
             }
         }
     }

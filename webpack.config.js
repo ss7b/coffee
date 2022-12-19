@@ -10,6 +10,7 @@ module.exports = {
       'assets/js/footer':'./src/assets/js/footer.js',
       'assets/js/button':'./src/assets/js/button.js',
       'assets/js/product':'./src/assets/js/product.js',
+      'assets/js/textfield':'./src/assets/js/textfield.js',
     },
     output: {
         path: path.join(__dirname,  "/app"),
@@ -97,7 +98,7 @@ plugins:[
   new HtmlWebpackPlugin({
     filename: "contact.html",
     template: "./src/contact.html",
-    chunks:['app','assets/js/footer']
+    chunks:['app','assets/js/footer','assets/js/textfield']
   }),
   new HtmlWebpackPlugin({
     filename: "aboutus.html",
@@ -107,22 +108,32 @@ plugins:[
   new HtmlWebpackPlugin({
     filename: "product-1.html",
     template: "./src/product-1.html",
-    chunks:['app','assets/js/footer','assets/js/button','assets/js/product']
+    chunks:['app','assets/js/footer','assets/js/button','assets/js/product','assets/js/textfield']
   }),
   new HtmlWebpackPlugin({
     filename: "product-2.html",
     template: "./src/product-2.html",
-    chunks:['app','assets/js/footer','assets/js/button','assets/js/product']
+    chunks:['app','assets/js/footer','assets/js/button','assets/js/product','assets/js/textfield']
   }),
   new HtmlWebpackPlugin({
     filename: "product-3.html",
     template: "./src/product-3.html",
-    chunks:['app','assets/js/footer','assets/js/button','assets/js/product']
+    chunks:['app','assets/js/footer','assets/js/button','assets/js/product','assets/js/textfield']
   }),
   new HtmlWebpackPlugin({
     filename: "delivery.html",
     template: "./src/delivery.html",
-    chunks:['app','assets/js/footer',]
+    chunks:['app','assets/js/footer','assets/js/textfield']
+  }),
+  new HtmlWebpackPlugin({
+    filename: "cart.html",
+    template: "./src/cart.html",
+    chunks:['app','assets/js/footer','assets/js/button','assets/js/textfield']
+  }),
+  new HtmlWebpackPlugin({
+    filename: "payment.html",
+    template: "./src/payment.html",
+    chunks:['app','assets/js/footer','assets/js/button','assets/js/textfield']
   }),
   new HtmlWebpackPlugin({ 
     filename: "components/navbar.html",
@@ -168,6 +179,11 @@ plugins:[
     filename: "components/hero.html",
     template: "./src/components/hero.html",
     chunks:['app',]
+  }),
+  new HtmlWebpackPlugin({ 
+    filename: "components/table.html",
+    template: "./src/components/table.html",
+    chunks:['app','assets/js/button']
   }),
   new MiniCssExtractPlugin({filename:"assets/css/style.css"}),
   new OptimizeCssAssetsPlugin({}),

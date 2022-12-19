@@ -105,9 +105,15 @@
                 &:not(:last-child){
                     border-left: 1px solid #000;
                 }
-                &:hover i{
-                    color: #fff;
-                    transition: $transtion;
+                &:hover {
+                    i{
+                        color: #fff;
+                        transition: $transtion;
+                    }
+                    
+                }
+                a.active{
+                    color: $white !important;
                 }
             }
         }

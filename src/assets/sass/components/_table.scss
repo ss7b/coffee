@@ -1,0 +1,52 @@
+.c-table{
+    &__head{
+        background-color: $primary-color;
+        th{
+            padding: 15px;
+            color: $white;
+        }
+    }
+    tr{
+        @include borderdir(bottom,20px, $lighten-primary-color);
+        text-align: center;
+        td{
+            padding: 0;
+            color: $title-color;
+            background-color: $primary-color;
+        }
+    }
+    img{
+        width:80px;
+        @include breakpiont(md){
+            width: 100px;
+        }
+    }
+    h4{
+        font-size: 16px;
+        @include breakpiont(md){
+        font-size: 20px;
+        }
+    }
+    .plus-minus {
+        height: 32px;
+        width:  85px;
+        @include breakpiont(md){
+            height: 40px;
+            width: 100px;
+        }
+    }
+    .value-box {
+        height: 32px;
+        line-height: 40px;
+        @include breakpiont(md){
+            height: 40px;
+        }
+    }
+    .qtybutton{
+        width: 25px;
+        background-color: $lighten-primary-color;
+        @include breakpiont(md){
+            width: 35px;
+        }
+    }
+}
