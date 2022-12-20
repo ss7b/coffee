@@ -1,6 +1,5 @@
 import "normalize.css/normalize.css";
 import "./assets/sass/style.scss";
-// import "./st.scss";
 
 import "jquery/dist/jquery.min.js"
 import '@popperjs/core/dist/umd/popper.min.js';
