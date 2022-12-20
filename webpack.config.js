@@ -65,7 +65,7 @@ module: {
             loader: "file-loader", 
             options: {
               name: '[name].[ext]',
-              outputPath: "fonts/",
+              outputPath: "assets/fonts/",
             }
           }
         ]
