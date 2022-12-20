@@ -11,20 +11,25 @@
     }
     
     .c-navbar__nav{
-        display: flex;
-        flex: 1;
-        justify-content: flex-end;
+        display: none;
+        @include breakpiont(md){
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+        }
         .nav-menu{
-            display: none;
-            @include breakpiont(md){
-                display: flex;
-            }
+            display: flex;
         }
     }
     &__action{
         color: textColor($black);
         display: flex;
+        flex: 1;
+        justify-content: flex-end;
         align-items: center;
+        @include breakpiont(md){
+            flex-grow: 0;
+        }
         .search{
             &-icon:hover{
                 color: $primary-color;
