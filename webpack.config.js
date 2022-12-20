@@ -11,10 +11,11 @@ module.exports = {
       'assets/js/button':'./src/assets/js/button.js',
       'assets/js/product':'./src/assets/js/product.js',
       'assets/js/textfield':'./src/assets/js/textfield.js',
+      'assets/js/aboutus.js':'./src/assets/js/aboutus.js',
     },
     output: {
         path: path.join(__dirname,  "/app"),
-        publicPath: '/',
+        publicPath: 'auto',
         filename: '[name].js',
         clean: true,
         assetModuleFilename: 'assets/images/[hash][ext][query]'
@@ -55,6 +56,7 @@ module: {
               'sass-loader'
             ]
       },
+        
       {
         test: /\.(svg|eot|woff|woff2|ttf)$/,
         exclude: /images/,
@@ -63,7 +65,7 @@ module: {
             loader: "file-loader", 
             options: {
               name: '[name].[ext]',
-              outputPath: "assets/fonts/",
+              outputPath: "fonts/",
             }
           }
         ]
@@ -103,7 +105,7 @@ plugins:[
   new HtmlWebpackPlugin({
     filename: "aboutus.html",
     template: "./src/aboutus.html",
-    chunks:['app','assets/js/footer']
+    chunks:['app','assets/js/footer','assets/js/aboutus.js']
   }),
   new HtmlWebpackPlugin({
     filename: "product-1.html",

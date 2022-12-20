@@ -106,7 +106,8 @@
                     border-left: 1px solid #000;
                 }
                 &:hover {
-                    i{
+                    // icon
+                    svg {
                         color: #fff;
                         transition: $transtion;
                     }

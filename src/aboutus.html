@@ -33,7 +33,9 @@
               </div>
               <div class="c-navbar__action ms-md-4">
                 <div class="search">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                  <span class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass "></i>
+                  </span>
                 <input type="text" placeholder="ابحث" class="search-input">
                 </div>
                 <a class=" ms-3" href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -71,6 +73,7 @@
       </div>
       <section class="Our-Stats p-section">
         <div class="container">
+          <h2 class="c-heading">احصائيات الشركة</h2>
           <div class="row">
             <div class="col-6 col-lg-3">
               <div class="card c-card c-card--feature c-card--feature-stats" style="width:18rem">
@@ -78,8 +81,8 @@
                   <i class="fa-solid fa-user-tie c-card__header__icon"></i>
                 </div>
                 <div class="card-body c-card__body">
-                  <h2 class="card-title c-card__body__title">
-                    500
+                  <h2 class="card-title c-card__body__title stat" data-goal="500">
+                    0
                   </h2>
                   <p class="card-text c-card__body__text">العملاء</p>
                 </div>
@@ -91,8 +94,8 @@
                     <i class="fa-solid fa-mug-hot c-card__header__icon"></i>
                 </div>
                 <div class="card-body c-card__body">
-                  <h2 class="card-title c-card__body__title">
-                    10
+                  <h2 class="card-title c-card__body__title stat" data-goal="10">
+                    0
                   </h2>
                   <p class="card-text c-card__body__text">المنتجات</p>
                 </div>
@@ -104,8 +107,8 @@
                   <i class="fa-solid fa-award c-card__header__icon"></i>
                 </div>
                 <div class="card-body c-card__body">
-                  <h2 class="card-title c-card__body__title">
-                    20
+                  <h2 class="card-title c-card__body__title stat" data-goal="20">
+                    0
                   </h2>
                   <p class="card-text c-card__body__text">سنوات الخبرة</p>
                 </div>
@@ -117,8 +120,8 @@
                     <i class="fa-solid fa-users-between-lines c-card__header__icon"></i>
                 </div>
                 <div class="card-body c-card__body">
-                  <h2 class="card-title c-card__body__title">
-                    900
+                  <h2 class="card-title c-card__body__title stat" data-goal="900">
+                    0
                   </h2>
                   <p class="card-text c-card__body__text">مشترين السعداء</p>
                 </div>
@@ -145,9 +148,27 @@
           <input type="text" placeholder="أدخل بريد الكتروني" class="form-control c-textfield__control no-border-right" required>
         </div>
         <ul class="socail-icons">
-          <li class=""><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f socail-icon"></i></a></li>
-          <li class=""><a href="https://twitter.com/"><i class="fa-brands fa-twitter icon socail-icon"></i></a></li>
-          <li class=""><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram icon socail-icon"></i></a></li>
+          <li class="">
+          <a href="https://www.facebook.com/">
+            <span class="socail-icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </span>
+          </a>
+          </li>
+          <li class="">
+            <a href="https://twitter.com/">
+              <span class="socail-icon">
+                <i class="fa-brands fa-twitter icon"></i>
+              </span>
+            </a>
+          </li>
+          <li class="">
+            <a href="https://www.instagram.com/">
+              <span class="socail-icon">
+                <i class="fa-brands fa-square-instagram icon"></i>
+              </span>
+            </a>
+          </li>
         </ul>
         <div class="c-footer__bottom mt-5 py-3">
           جميع الحقوق محفوظة &copy;<span class="me-1" id="date"></span>كوفيك
