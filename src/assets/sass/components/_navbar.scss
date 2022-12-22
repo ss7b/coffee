@@ -9,7 +9,6 @@
     .brand{
         color: textColor($black);
     }
-    
     .c-navbar__nav{
         display: none;
         @include breakpiont(md){
@@ -28,7 +27,7 @@
         justify-content: flex-end;
         align-items: center;
         @include breakpiont(md){
-            flex-grow: 0;
+            flex: 0 0 auto;
         }
         .search{
             &-icon:hover{

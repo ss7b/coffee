@@ -14,3 +14,4 @@ $('.search-icon').on('click', function(){
     console.log("ss")
     $('.search-input').toggleClass('active')
 })
+

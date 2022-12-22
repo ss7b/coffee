@@ -59,6 +59,9 @@ $(function(){
         })
         $("#allprice").text(allProductPrice +"$")
     }
-   
+   // add to cart
+    $('.add-cart').on("click",function(){
+        $(this).html(` تم الإضافة <i class="fa-solid fa-check"></i>`)
+    })
 })
 

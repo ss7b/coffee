@@ -41,7 +41,7 @@
         &__title{
             color: $title-color;
             font-weight: bold;
-            font-size: 25px;
+            font-size: 24px;
             margin-bottom: 13px !important;
             @include breakpiont(md){
                 font-size: 30px;
@@ -141,12 +141,15 @@
             }
             &__title{
                 font-size: 16px;
+                @include breakpiont(md){
+                    font-size: 25px;
+                }
             }
             &__text{
                 font-size: 12px;
                 @include breakpiont(md){
                     font-size: 20px;
-                -webkit-line-clamp: 3;
+                    -webkit-line-clamp: 3;
                 }
                 @include breakpiont(lg){
                     -webkit-line-clamp: 4;
